@@ -68,18 +68,20 @@ public class StudentController {
 //
 //
 //    }
-
-    @PatchMapping("/patch/{Id}")
-    public  ResponseEntity<StudentDto> patchStudent(@PathVariable long  Id,  @RequestBody Map<String, Object>  partialUpdate){
-
-        StudentDto studentdto = studentService.patchStudent(Id, partialUpdate);
-
-        return new ResponseEntity<>(studentdto,HttpStatus.OK);
-
-
-    }
-
-
-  //  Map<String, Object>
+//
+////    @PatchMapping("/patch/{Id}")
+////    public  ResponseEntity<StudentDto> patchStudent(@PathVariable long  Id,  @RequestBody Map<String, Object>  partialUpdate){
+////
+////        StudentDto studentdto = studentService.patchStudent(Id, partialUpdate);
+////
+////        return new ResponseEntity<>(studentdto,HttpStatus.OK);
+////
+////
+////    }
+//
+//
+//  //  Map<String, Object>
+//
+//}
 
 }

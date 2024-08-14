@@ -76,9 +76,9 @@ public class StudentServiceImpl implements StudentService {
 
 
 
-    @Override
-    public StudentDto patchStudent(long id, Map<String, Object> partialUpdate) {
-        Student student = studentRepository.findById(id).get();
+//    @Override
+//    public StudentDto patchStudent(long id, Map<String, Object> partialUpdate) {
+//        Student student = studentRepository.findById(id).get();
 
 // another way
 //        for (Map.Entry<String, Object> entry : partialUpdate.entrySet()) {
@@ -100,32 +100,32 @@ public class StudentServiceImpl implements StudentService {
 
 
 
-        for (String key : partialUpdate.keySet()) {
-
-            if (key.equals("firstName")){
-              String  firstName = partialUpdate.get(key).toString();
-                student.setFirstName(firstName);
-
-            }
-
-            if (key.equals("lastName")){
-                String  lastName = partialUpdate.get(key).toString();
-                student.setLastName(lastName);
-
-            }
-
-
-        }
-
-
-
-        Student savedstudent = studentRepository.save(student);
-
-
-        StudentDto dto  = new StudentDto();
-        dto.setSid(savedstudent.getSid());
-        dto.setFirstName(savedstudent.getFirstName());
-        dto.setLastName(savedstudent.getLastName());
-        return dto;
-    }
+//        for (String key : partialUpdate.keySet()) {
+//
+//            if (key.equals("firstName")){
+//              String  firstName = partialUpdate.get(key).toString();
+//                student.setFirstName(firstName);
+//
+//            }
+//
+//            if (key.equals("lastName")){
+//                String  lastName = partialUpdate.get(key).toString();
+//                student.setLastName(lastName);
+//
+//            }
+//
+//
+//        }
+//
+//
+//
+//        Student savedstudent = studentRepository.save(student);
+//
+//
+//        StudentDto dto  = new StudentDto();
+//        dto.setSid(savedstudent.getSid());
+//        dto.setFirstName(savedstudent.getFirstName());
+//        dto.setLastName(savedstudent.getLastName());
+//        return dto;
+//    }
 }

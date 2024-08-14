@@ -17,5 +17,5 @@ public interface StudentService {
    StudentDto updateStudent(long id, StudentDto studentDto);
 
   // StudentDto patchStudent(long id, StudentDto studentDto);
-   StudentDto patchStudent(long id, Map<String, Object> partialUpdate);
+//   StudentDto patchStudent(long id, Map<String, Object> partialUpdate);
 }
